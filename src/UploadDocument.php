@@ -41,7 +41,7 @@ class UploadDocument
             if (is_null($uploadDocument)) continue;
 
             if (config('uploadtolaravel.storage_data')) {
-                $data = $this->getData($uploadDocument['data_file']);
+                $data = $this->getData($uploadDocument[config('uploadtolaravel.data_file')]);
                 if (is_null($data)) return null;
 
                 $data->referer_links = $uploadDocument['url']; //current url

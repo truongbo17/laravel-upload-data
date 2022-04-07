@@ -32,6 +32,7 @@ return [
      * Save data in storage
      */
     'storage_data' => true,
+    'data_file' => 'data_file',
 
     /*
      * Time upload
