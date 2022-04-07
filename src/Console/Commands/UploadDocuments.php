@@ -1,6 +1,6 @@
 <?php
 
-namespace TruongBo\UploadToLaravel\Console;
+namespace TruongBo\UploadToLaravel\Console\Commands;
 
 use TruongBo\UploadToLaravel\Queue\UploadDocumentQueue;
 use TruongBo\UploadToLaravel\UploadDocument;
