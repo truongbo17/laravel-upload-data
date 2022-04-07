@@ -1,5 +1,6 @@
 {
     "name": "truongbo/uploadtolaravel",
+    "version": "v1.0",
     "description": "Upload documents to Laravel for Crawl",
     "keywords": [
         "truongbo",
