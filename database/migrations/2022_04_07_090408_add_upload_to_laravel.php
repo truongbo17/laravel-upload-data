@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddUploadStatusToLaravel extends Migration
+class AddUploadToLaravel extends Migration
 {
     /**
      * @var string
@@ -36,9 +36,14 @@ class AddUploadStatusToLaravel extends Migration
      */
     public function down()
     {
-        if (Schema::hasColumn('upload_status', 'uploaded_at')) {
+        if (Schema::hasColumn($this->table, 'upload_status')) {
             Schema::table($this->table, function (Blueprint $table) {
-                $table->dropColumn('upload_status', 'uploaded_at');
+                $table->dropColumn('upload_status');
+            });
+        }
+        if (Schema::hasColumn($this->table, 'uploaded_at')) {
+            Schema::table($this->table, function (Blueprint $table) {
+                $table->dropColumn('uploaded_at');
             });
         }
     }
