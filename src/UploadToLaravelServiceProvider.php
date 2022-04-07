@@ -3,7 +3,7 @@
 namespace TruongBo\UploadToLaravel;
 
 use Illuminate\Support\ServiceProvider;
-use TruongBo\UploadToLaravel\Console\UploadDocuments;
+use TruongBo\UploadToLaravel\Console\Commands\UploadDocuments;
 
 class UploadToLaravelServiceProvider extends ServiceProvider
 {
