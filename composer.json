@@ -1,0 +1,35 @@
+{
+    "name": "truongbo/uploadtolaravel",
+    "description": "Upload documents to Laravel for Crawl",
+    "keywords": [
+        "truongbo",
+        "uploadtolaravel"
+    ],
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "TruongBo\\UploadToLaravel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nguyen Quang Truong",
+            "email": "truongnq017@gmail.com",
+            "role": "Intership"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^8.0",
+        "bensampo/laravel-enum": "^4",
+        "vuh/cli-echo": "^0.2.1",
+        "guzzlehttp/guzzle": "^7.0.1"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TruongBo\\UploadToLaravel\\UploadToLaravelServiceProvider"
+            ]
+        }
+    }
+}
