@@ -23,6 +23,17 @@ class AddUploadToLaravel extends Migration
      */
     public function up()
     {
+        if (Schema::hasColumn($this->table, 'upload_status')) {
+            Schema::table($this->table, function (Blueprint $table) {
+                $table->dropColumn('upload_status');
+            });
+        }
+        if (Schema::hasColumn($this->table, 'uploaded_at')) {
+            Schema::table($this->table, function (Blueprint $table) {
+                $table->dropColumn('uploaded_at');
+            });
+        }
+
         Schema::table($this->table, function (Blueprint $table) {
             $table->integer('upload_status')->default(0);
             $table->timestamp('uploaded_at');
@@ -36,15 +47,6 @@ class AddUploadToLaravel extends Migration
      */
     public function down()
     {
-        if (Schema::hasColumn($this->table, 'upload_status')) {
-            Schema::table($this->table, function (Blueprint $table) {
-                $table->dropColumn('upload_status');
-            });
-        }
-        if (Schema::hasColumn($this->table, 'uploaded_at')) {
-            Schema::table($this->table, function (Blueprint $table) {
-                $table->dropColumn('uploaded_at');
-            });
-        }
+
     }
 }
